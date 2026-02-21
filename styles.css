@@ -1,0 +1,556 @@
+/* Base styles */
+:root {
+  --background: #ffffff;
+  --foreground: #0f172a;
+  --chat-gray: #d9d9d9;
+  --chat-blue: #dce5ff;
+  --chat-problem: #b8b8b8;
+  --chat-link: #4661c2;
+  --chat-link-hover: #5a7cfa;
+  --chat-button: #4661c2;
+  --chat-button-hover: #5a7cfa;
+  --chat-button-secondary: #5a7cfa;
+  --chat-button-secondary-hover: #b5c8ff;
+  --border: #e2e8f0;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  background-color: var(--background);
+  color: var(--foreground);
+  line-height: 1.5;
+}
+
+/* Layout */
+.superContainer {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  overflow: hidden;
+  align-items: center;
+  justify-content: center;
+  place-items: center;
+  padding: 0;
+  margin: 0;
+}
+
+.topContainer {
+  width: 100vw;
+  background-color: #4661c2;
+  color: var(--background);
+  display: flex;
+  flex-direction: row;
+  height: 8%;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+
+.topText {
+  width: 85%;
+  text-decoration: none;
+  color: var(--background);
+}
+
+.container {
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+  max-width: 1620px;
+  max-height: 900px;
+}
+
+.column {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.left-column {
+  width: 50%;
+  border-right: 1px solid var(--chat-problem);
+}
+
+.right-column {
+  width: 50%;
+  background-color: var(--chat-blue);
+}
+
+/* Problem Area */
+.problem-container {
+  background-color: var(--chat-problem);
+  padding: 1rem;
+  border-radius: 0.5rem;
+  height: 16rem;
+  margin-bottom: 1rem;
+}
+
+.problem-content {
+  white-space: pre-wrap;
+}
+
+code {
+  background-color: transparent;
+  padding: 2px 4px;
+  border-radius: 4px;
+  white-space: pre-wrap; /* Ensure code wraps */
+  word-break: break-word; /* Break long lines */
+  max-width: 100%; /* Ensure it doesn't overflow */
+  text-indent: 0;
+  text-align: justify;
+  margin: 0;
+  font-size: 1rem;
+}
+
+
+/* Messages Area */
+.messages-container {
+  flex: 1;
+  overflow-y: auto;
+  padding: 0.5rem 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.message {
+  padding: 1rem;
+  border-radius: 0.5rem;
+  max-width: 80%;
+}
+
+.message.user {
+  background-color: var(--chat-blue);
+  margin-left: auto;
+}
+
+.message.bot {
+  background-color: var(--chat-gray);
+}
+
+/* Chat Input */
+.chat-input-container {
+  margin-top: 0.5rem;
+  background-color: var(--chat-blue);
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+}
+
+.chat-form {
+  display: flex;
+  gap: 0.25rem;
+}
+
+.chat-textarea {
+  flex: 1;
+  background: transparent;
+  border: none;
+  resize: none;
+  min-height: 36px;
+  max-height: 96px;
+  padding: 0.5rem;
+  outline: none;
+  font-size: 1rem;
+}
+
+.submit-button {
+  background: none;
+  border: none;
+  color: var(--chat-link);
+  cursor: pointer;
+  padding: 0.5rem;
+}
+
+.submit-button:hover {
+  color: var(--chat-link-hover);
+}
+
+/* Proof Area */
+.proof-container {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  background-color: var(--chat-blue);
+  border-radius: 0.5rem;
+  margin-bottom: 1rem;
+  position: relative;
+  gap:0;
+}
+
+.proof-textarea,
+.proof-preview {
+  width: 100%;
+  height: 90%;
+  background-color: white;
+  border-radius: 0.5rem;
+  padding: 1rem;
+}
+
+.latex-render {
+  height: 10%;
+  display: flex;
+  background-color: white;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  align-items: center;
+  justify-content: center;
+  place-items: center;
+}
+
+.nav-button.terciary {
+  background-color: var(--chat-button);
+  flex: 0;
+  width: 10rem;
+}
+
+.nav-button.terciary:hover {
+  background-color: var(--chat-button-hover);
+}
+
+
+.proof-textarea {
+  border: none;
+  resize: none;
+  outline: none;
+  font-size: 1.2rem;
+}
+
+/*.proof-textarea:focus {
+  box-shadow: 0 0 0 2px var(--chat-link);
+}*/
+
+/* LaTeX Preview */
+.latex-preview {
+  position: fixed;
+  background-color: var(--chat-button);
+  color: white;
+  padding: 0.25rem;
+  border-radius: 0.5rem;
+  border: 1px solid var(--chat-button-secondary);
+  z-index: 40;
+  display: none;
+}
+
+/* Navigation Buttons */
+.navigation-buttons {
+  display: flex;
+  gap: 1rem;
+  justify-content: space-between;
+}
+
+.nav-button {
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  border: none;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.nav-button.primary {
+  background-color: var(--chat-button);
+  flex: 1;
+}
+
+.nav-button.primary:hover {
+  background-color: var(--chat-button-hover);
+}
+
+.nav-button.secondary {
+  background-color: var(--chat-button-secondary);
+}
+
+.nav-button.secondary:hover {
+  background-color: var(--chat-button-hover);
+}
+
+/* Scrollbars */
+.scrollbar-custom::-webkit-scrollbar {
+  width: 8px;
+}
+
+.scrollbar-custom::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.1);
+  border-radius: 20px;
+}
+
+.scrollbar-custom::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.3);
+  border-radius: 20px;
+}
+
+.scrollbar-custom:hover::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.scrollbar-custom {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(0, 0, 0, 0.3) rgba(0, 0, 0, 0.1);
+}
+
+.scrollbar-white::-webkit-scrollbar {
+  width: 8px;
+}
+
+.scrollbar-white::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+}
+
+.scrollbar-white::-webkit-scrollbar-thumb {
+  background-color: rgba(255, 255, 255, 0.3);
+  border-radius: 20px;
+}
+
+.scrollbar-white:hover::-webkit-scrollbar-thumb {
+  background-color: rgba(255, 255, 255, 0.4);
+}
+
+.scrollbar-white {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(255, 255, 255, 0.3) rgba(255, 255, 255, 0.1);
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+
+  .superContainer {
+    margin: 0;
+    padding: 0;
+    overflow: auto;
+    align-items: auto;
+    justify-content:auto;
+    place-items:auto;
+  }
+
+  .container {
+    margin: 0;
+    padding: 0;
+    max-height: 100vh;
+    flex-direction: column;
+  }
+
+  .problem-container {
+    height: 12rem;
+  }
+
+  .left-column,
+  .right-column {
+    width: 100%;
+    height: 50vh;
+  }
+
+  .right-column {
+    border-top: 1px solid var(--chat-problem);
+    gap: 0;
+  }
+
+  .proof-container {
+    height: 100%;
+  }
+
+  .proof-textarea {
+    height: 85%;
+  }
+
+  .latex-render {
+    height: 15%;
+    margin: 0;
+    padding: 0.5rem;
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 390px) {
+
+  .navigation-buttons {
+    display: flex;
+    gap: 0.5rem;
+    justify-content: none;
+  }
+  
+  .nav-button {
+    padding: 0.75rem 0.5rem;
+    border-radius: 0.5rem;
+    border: none;
+    color: white;
+    cursor: none;
+    transition: background-color 0.2s;
+    font-size: 10px;
+  }
+
+  .proof-container {
+    height: 100%;
+    margin: 0;
+  }
+
+  .proof-textarea {
+    height: 85%;
+  }
+
+  .latex-render {
+    height: 10rem;
+    margin: 0;
+    padding: 0rem;
+  }
+
+  .nav-button.terciary {
+    padding:0rem;
+    height: 3rem;
+    font-size: 0.1px;
+  }
+}
+
+.super-Container {
+  display: flex;
+  flex-direction: row;
+  height: 100vh;
+  overflow: hidden;
+  align-items: center;
+  justify-content: center;
+  place-items: center;
+  padding: 0;
+  margin: 0;
+  background-color: var(--chat-blue);
+}
+
+
+/* funcionamiento básico del sistema de pestañas */
+.tab-container {
+  height: 80vh;
+  width: 80vw;
+  overflow: hidden;
+  align-items: center;
+  justify-content: center;
+  place-items: center;
+  padding: 0;
+  margin: 0;
+} 
+
+
+.tab-content {
+  display: none;
+  width: 80vw;
+}
+
+.tab:target .tab-content, .tab:last-of-type .tab-content {
+  display: block;
+}
+
+.tab:target ~ .tab:last-of-type .tab-content {
+  display: none;
+}
+
+/* parámetros para configurar las pestañas */
+:root {
+  --tabs-width: 150px;
+  --tabs-height: 60px;
+}
+
+/* aspecto básico */
+body {
+  font-family: sans-serif;
+  line-height: 1.2;
+}
+h2 {
+  margin: 0;
+  color: var(--background);
+} 
+
+.tabs * {
+  box-sizing: border-box;
+  width: 35rem;
+}
+
+/* esto es para posicionar las pestañas correctamente */
+.tab-container {
+  position: relative;
+  padding-top: calc(var(--tabs-height) + 0.05rem); /* en esta zona colocaremos las pestañas */
+} 
+#tab1>a { --tabs-position: 0; }
+#tab2>a { --tabs-position: 1; }
+#tab3>a { --tabs-position: 2; }
+#tab4>a { --tabs-position: 3; }
+#tab5>a { --tabs-position: 4; }
+#tab6>a { --tabs-position: 5; }
+#tab7>a { --tabs-position: 6; }
+#tab8>a { --tabs-position: 7; }
+#tab9>a { --tabs-position: 8; }
+.tab>a {
+  text-align: center;
+  position: absolute;
+  width: calc(var(--tabs-width));
+  height: calc(var(--tabs-height) + 5px); 
+  top: 0;
+  left: calc(var(--tabs-width) * var(--tabs-position)); /* posición de cada pestaña */
+}
+
+/* más aspecto */
+.tabs { 
+  padding: 10px;
+  color: var(--background);
+}
+.tab-content {
+  background-color: var(--chat-link); 
+  padding: 20px;
+  border: 5px solid var(--chat-blue);
+  border-radius: 0 0 10px 10px;
+  position: relative;
+  z-index: 100;
+}
+.tab>a {
+  background-color: var(--chat-link-hover); 
+  padding: 10px;
+  border: 5px solid var(--chat-blue);
+  border-radius: 10px 10px 0 0;
+  border-bottom: 0;
+  color: var(--border);
+  place-items: center;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.tab:target>a {
+  background-color: var(--chat-link); 
+  z-index: 200;
+  color: var(--background);
+}
+
+.tab:last-of-type>a {
+  background-color: var(--chat-link); 
+  z-index: 200;
+  color: var(--background);
+}
+
+.tab:target ~ .tab:last-of-type>a {
+  background-color: var(--chat-link-hover); 
+  z-index: 0; 
+  color: var(--border);
+}
+
+.list {
+  margin: 2rem 4rem;
+  font-size: 1.2rem;
+  color: var(--background);
+}
+
+.Exercises {
+  text-decoration: none;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  align-self: center;
+  align-content: center;
+}
+
+.exerciseslinks {
+  text-emphasis: true;
+  color: var(--background);
+}

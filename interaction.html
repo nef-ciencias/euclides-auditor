@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Euclides</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="LogoPestana.ico">
+    <!-- Estilos de KaTeX -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/marked-katex-extension@5.1.4/lib/index.umd.js"></script>
+    <!-- Archivo de problemas -->
+    <script src="data/problems.js"></script>
+</head>
+<body>
+    <div class="superContainer">
+        <div class="topContainer">
+            <img src="LogoTop.svg" height="60"/>
+           <a href="index.html" class="topText">Volver a la pagina principal</a>
+        </div>
+
+        <div class="container">
+            <!-- Columna Izquierda - Chat -->
+            <div class="column left-column">
+                <!-- Área del problema -->
+                <div class="problem-container">
+                    <div id="problem-area" class="problem-content scrollbar-custom">
+                    
+                    </div>
+                </div>
+                
+    
+                <!-- Área de mensajes -->
+                <div id="chat-history" class="messages-container scrollbar-custom">
+                    <!-- Messages will be inserted here -->
+                </div>
+    
+                <!-- Área de Chat -->
+                <div class="chat-input-container">
+                    <form id="chat-form" class="chat-form">
+                        <textarea 
+                            id="chat-input" 
+                            class="chat-textarea scrollbar-white" 
+                            placeholder="Escribe tus dudas..."
+                            rows="1"
+                        ></textarea>
+                        <button type="submit" class="submit-button" onclick="handleSubmit">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <polyline points="9 18 15 12 9 6"></polyline>
+                            </svg>
+                        </button>
+                    </form>
+                </div>
+            </div>
+    
+            <!-- Columna Derecha - Área de Demostración -->
+            <div class="column right-column">
+                <!-- Entrada de Demostración -->
+                <div class="proof-container">
+                    <textarea 
+                        id="proof-input"
+                        class="proof-textarea scrollbar-custom"
+                        placeholder="Escribe tu demostración aquí... Usa \( \) para fórmulas inline y \[ \] para fórmulas en bloque"
+                    ></textarea>
+                    <div id="proof-preview" class="proof-preview scrollbar-custom" style="display: none;">
+                    </div>
+    
+                    <!-- Renderización de LaTeX -->
+                    <div class="latex-render">
+                        <button id="render-button" class="nav-button terciary" onclick="render()">Compilar</button>
+                    </div>
+                </div>
+    
+                <!-- Previsualización de LaTeX -->
+                <div id="latex-preview" class="latex-preview" style="display: none;">
+                </div>
+    
+                <!-- Botones de navegación -->
+                <div class="navigation-buttons">
+                    <button id="prev-button" class="nav-button secondary" onclick="previousProblem()">‹ Anterior</button>
+                    <button id="verify-button" class="nav-button primary" onclick="verify()">Verificar demostración</button>
+                    <button id="next-button" class="nav-button secondary" onclick="nextProblem()">Siguiente ›</button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="main.js"></script>
+    <script>
+        function obtenerParametroURL(nombre) {
+            const urlParams = new URLSearchParams(window.location.search);
+            return urlParams.get(nombre);
+        }
+        var id = parseInt(obtenerParametroURL("id"),10)
+        console.log(id)
+        var set = parseInt(obtenerParametroURL("set"),10)
+        console.log(set)
+        setCurrentProblem(set, id)
+    </script>
+</body>
+</html>
+

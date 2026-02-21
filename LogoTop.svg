@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="170.69014mm"
+   height="88.565117mm"
+   viewBox="0 0 170.69014 88.565117"
+   version="1.1"
+   id="svg1"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="mm">
+    <inkscape:page
+       x="-2.7735498e-14"
+       y="-1.6368763e-13"
+       width="170.69012"
+       height="88.565125"
+       id="page2"
+       margin="0"
+       bleed="0" />
+  </sodipodi:namedview>
+  <defs
+     id="defs1" />
+  <g
+     inkscape:label="Capa 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-32.615301,-83.261821)">
+    <rect
+       style="fill:#4661c2;fill-opacity:1;stroke:none;stroke-width:1.48822;stroke-linecap:round;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1"
+       id="rect1"
+       width="170.69012"
+       height="88.565117"
+       x="32.615299"
+       y="83.261826"
+       ry="9.375"
+       inkscape:export-filename="LogoTop.svg"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96" />
+    <path
+       style="fill:#eaedef;stroke:#ffffff;stroke-width:2.113;stroke-linecap:round;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1"
+       d="M 54.281249,91.756326 V 159.87533"
+       id="path1" />
+    <path
+       style="fill:#eaedef;stroke:#ffffff;stroke-width:2.114;stroke-linecap:round;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1"
+       d="M 98.825482,91.389955 H 54.545217"
+       id="path1-1" />
+    <path
+       style="fill:none;stroke:#ffffff;stroke-width:1.509;stroke-linecap:round;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1"
+       d="m 98.896083,91.779014 c -8.300507,19.752766 -34.109019,25.966326 -44.280265,0"
+       id="path1-1-1"
+       sodipodi:nodetypes="cc" />
+    <path
+       style="fill:#eaedef;stroke:#ffffff;stroke-width:2.114;stroke-linecap:round;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1"
+       d="M 98.873976,160.11713 H 54.593714"
+       id="path1-1-2" />
+    <path
+       style="fill:#eaedef;stroke:#ffffff;stroke-width:2.114;stroke-linecap:round;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1"
+       d="m 70.85145,125.54799 -16.430676,9.48625"
+       id="path1-8" />
+    <path
+       style="fill:#eaedef;stroke:#ffffff;stroke-width:2.114;stroke-linecap:round;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1"
+       d="M 70.912621,125.5932 54.481945,116.10695"
+       id="path1-8-5" />
+    <path
+       style="fill:none;stroke:#ffffff;stroke-width:1.509;stroke-linecap:round;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1"
+       d="m 99.14787,159.7141 c -8.300509,-19.75277 -34.109021,-25.96633 -44.280267,0"
+       id="path1-1-1-7"
+       sodipodi:nodetypes="cc" />
+    <text
+       xml:space="preserve"
+       style="font-size:24.3388px;line-height:normal;font-family:Sans;-inkscape-font-specification:Sans;text-align:start;text-decoration-color:#000000;writing-mode:lr-tb;direction:ltr;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:3.25339;stroke-linecap:round;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1"
+       x="100.01964"
+       y="134.60858"
+       id="text1"><tspan
+         sodipodi:role="line"
+         style="font-style:italic;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:Sans;-inkscape-font-specification:'Sans Bold Italic';fill:#ffffff;fill-opacity:1;stroke-width:3.25339"
+         x="100.01964"
+         y="134.60858"
+         id="tspan2">Euclides </tspan></text>
+  </g>
+</svg>
