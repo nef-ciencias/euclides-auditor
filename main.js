@@ -392,7 +392,7 @@ async function handleSubmit(message) {
     };
 
     // 4. Llamar al servidor local FastAPI
-    const codespaceUrl = "http://127.0.0.1:8000";
+    const codespaceUrl = "https://euclides-auditor.onrender.com";
     const response = await fetch(`${codespaceUrl}/api/verify`, {
       method: "POST",
       headers: {
