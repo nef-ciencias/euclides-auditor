@@ -144,8 +144,8 @@ async function verify() {
       rigor_level: "dificil",
     };
 
-    // 4. Llamada al backend local
-    const codespaceUrl = "http://127.0.0.1:8000";
+    // 4. Llamada al backend en Render
+    const codespaceUrl = "https://euclides-auditor.onrender.com";
 
     const response = await fetch(`${codespaceUrl}/api/verify`, {
       method: "POST",
