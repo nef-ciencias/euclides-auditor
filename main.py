@@ -89,6 +89,7 @@ Estructura JSON requerida:
 REGLAS GLOBALES:
 1. NUNCA resuelvas el problema directamente.
 2. Evalúa divisiones por cero, razonamiento circular y omisiones de dominio.
+3. ESCAPE DE LATEX: Es obligatorio usar doble barra invertida en TODOS los comandos matemáticos (ejemplo: \\\\theta, \\\\frac, \\\\pi) para evitar que el JSON confunda \\t con tabulaciones.
 
 NIVEL DE RIGOR ACTUAL: {rigor_level}
 - facil: Heurística de Pólya. Da pistas conceptuales suaves.
